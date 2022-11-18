@@ -10,7 +10,7 @@ class TestExtension {
           text: 'π'
         }
       ]
-    }
+    };
   }
   
   pi() {

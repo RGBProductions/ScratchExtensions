@@ -7,7 +7,7 @@ class TestExtension {
         {
           opcode: 'pi',
           blockType: Scratch.BlockType.REPORTER,
-          text: 'π'
+          text: 'pi'
         }
       ]
     };

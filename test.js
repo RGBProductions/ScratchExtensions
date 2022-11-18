@@ -1,16 +1,22 @@
+alert("Test extension attempt to load");
+
 class TestExtension {
   getInfo() {
-    return {
-      id: 'test-extension',
-      name: 'Test Extension',
-      blocks: [
-        {
-          opcode: 'pi',
-          blockType: Scratch.BlockType.REPORTER,
-          text: 'π'
-        }
-      ]
-    };
+    try {
+      return {
+        id: 'test-extension',
+        name: 'Test Extension',
+        blocks: [
+          {
+            opcode: 'pi',
+            blockType: Scratch.BlockType.REPORTER,
+            text: 'π'
+          }
+        ]
+      };
+    } catch(e) {
+      alert(`Test extension failed to load: ${e}`);
+    }
   }
   
   pi() {
